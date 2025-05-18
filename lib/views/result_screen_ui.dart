@@ -41,12 +41,33 @@ class _ResultScreenUiState extends State<ResultScreenUi> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'ผ่อนทั้งหมด ${widget.month} เดือน',
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [ //${widget.month} เดือน
+                Text(
+                  'ผ่อนทั้งหมด  ',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  '${widget.month}',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.red
+                  ),
+                ),
+                Text(
+                  '  เดือน',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                
+              ],
             ),
             Text(
               'ค่างวดรถต่อเดือน',

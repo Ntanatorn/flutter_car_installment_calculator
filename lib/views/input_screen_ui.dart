@@ -398,7 +398,15 @@ class _InputScreenUIState extends State<InputScreenUI> {
                   height: 10,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      _carPriceCtrl.clear();
+                      _InterestCtrl.clear();
+                      _downCtrl = 10;
+                      _monthCtrl = 24;
+                    });
+                    //เคลียทุกอย่างให้เป็นเหมือนเดิม
+                  },
                   child: Text(
                     'ยกเลิก',
                     style: TextStyle(
